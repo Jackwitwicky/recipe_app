@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1 class="text-center">Welcome to the Recipe Box</h1>
+</div>
+
+<%= link_to "New Recipe", new_recipe_path, class: "btn btn-primary" %>
+
+<p>
+  <% @recipe.each do |recipe| %>
+      <%= link_to recipe do
+        image_tag recipe.image.url(:medium)
+      end %>
+    <%= link_to recipe.title, recipe %>
+  <% end %>
+</p>
