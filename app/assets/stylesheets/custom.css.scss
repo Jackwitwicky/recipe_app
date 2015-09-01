@@ -1,2 +1,46 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+/* universal */
+
+body {
+  background: rgb(235, 238, 243 );
+}
+
+/* navbar */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  padding-top: 9px;
+  font-weight: bold;
+
+  &:hover {
+    color: plum;
+    text-decoration: none;
+  }
+}
+
+/* recipe index page */
+
+.recipe {
+  background: white;
+  border-radius: 5px;
+  .image-wrapper {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+
+    &:hover {
+      transform: scale(1.045);
+    }
+  }
+}
