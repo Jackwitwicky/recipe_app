@@ -31,6 +31,31 @@
       <%= f.file_field :image %>
     </div>
 
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Ingredients</h2>
+        <div id="ingredients">
+          <%= f.fields_for(:ingredients) do |ingredient| %>
+              <%= render 'ingredient_fields', f: ingredient %>
+          <% end %>
+          <div class="links">
+            <%= link_to_add_association "Add ingredient", f, :ingredients, class: "btn btn-default add-buton" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Directions</h2>
+        <div id="directions">
+          <%= f.fields_for(:directions) do |direction| %>
+            <%= render 'direction_fields', f: direction %>
+          <% end %>
+          <div class="links">
+            <%= link_to_add_association "Add direction", f, :directions, class: "btn btn-default add-button" %>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="form-group">
       <%= f.submit "Save Recipe", class: "btn btn-success" %>
     </div>

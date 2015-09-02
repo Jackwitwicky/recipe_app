@@ -7,6 +7,13 @@ body {
   background: rgb(235, 238, 243 );
 }
 
+.btn-default {
+  background-color: transparent;
+  &:hover {
+    background-color: plum;
+  }
+}
+
 /* navbar */
 #logo {
   float: left;
@@ -22,6 +29,10 @@ body {
   }
 }
 
+/* rows */
+.row {
+  padding-bottom: 30px;
+}
 /* recipe index page */
 
 .recipe {
@@ -42,5 +53,62 @@ body {
     &:hover {
       transform: scale(1.045);
     }
+  }
+}
+
+/* nested forms */
+
+/* ingredients form */
+
+#ingredients {
+  background: white;
+}
+
+/* directions form */
+#directions {
+  background: white;
+}
+
+.form-inline {
+  margin-top: 15px;
+}
+.form-input {
+  width: 65%;
+}
+
+.form-button {
+  margin-left: 5%;
+}
+
+.add-button {
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+/* recipe show page */
+
+.description {
+  background: white;
+  min-height: 300px;
+  h1 {
+    color: plum;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+#ingredients, #directions {
+  min-height: 400px;
+  h2 {
+    padding-top: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+  }
+  li {
+    padding-bottom: 15px;
+    font-size: 17px;
   }
 }
