@@ -1,0 +1,12 @@
+<section class="user-comment">
+  <%= gravatar_for(User.find_by(name: comment.name)) %>
+
+  <p>
+  <h3><%= comment.name %></h3>
+  </p>
+  <p>
+    <%= comment.content %>
+  </p>
+
+  <hr class="featurette-divider">
+</section>

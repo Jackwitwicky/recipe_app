@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    session[:previous_recipe_page] = request.env['HTTP_REFERER']
   end
 
   def create
@@ -8,7 +9,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in(user)
       remember(user)
-      redirect_to root_path
+      flash[:success] = "You have been looged in"
+      redirect_to session[:previous_recipe_page]
     else
       flash[:danger] = "Invalid email/password combination"
       render 'new'

@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box-shadow {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
 /* universal */
 
 body {
@@ -12,6 +18,26 @@ body {
   &:hover {
     background-color: plum;
   }
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  @include box-shadow;
+  background: white;
+  font-weight: bold;
 }
 
 /* navbar */
@@ -54,7 +80,14 @@ body {
       transform: scale(1.045);
     }
   }
+  .recipe-links {
+    &:hover {
+      color: plum;
+      text-decoration: none;
+    }
+  }
 }
+
 
 /* nested forms */
 
@@ -90,7 +123,7 @@ body {
 .description {
   background: white;
   min-height: 300px;
-  h1 {
+  h2 {
     color: plum;
     font-size: 3em;
     font-weight: bold;
@@ -111,6 +144,14 @@ body {
     padding-bottom: 15px;
     font-size: 17px;
   }
+}
+
+.panel-comments {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  min-height: 300px;
+  background-color: aliceblue;
 }
 
 /* new user form */
@@ -134,4 +175,11 @@ body {
     margin-left: 5px;
     font-weight: normal;
   }
+}
+
+/* featurette divider */
+.featurette-divider {
+  margin: 30px 0;
+  margin-left: 40px;
+  margin-right: 40px;
 }

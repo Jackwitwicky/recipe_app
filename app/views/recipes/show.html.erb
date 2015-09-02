@@ -4,7 +4,7 @@
       <%= image_tag(@recipe.image.url(:medium), class: "img-rounded") %>
     </div>
     <div class="col-md-8 description">
-      <h1><%= @recipe.title %></h1>
+      <h2><%= @recipe.title %></h2>
       <p>
         <%= @recipe.description %>
       </p>
@@ -33,6 +33,32 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-push-1 col-md-10">
+      <div class="panel panel-default panel-comments">
+        <h2 class="text-center"><%= pluralize(@recipe.comments.count, "comment")%></h2>
+        <% if @recipe.comments.any? %>
+            <%= render @recipe.comments %>
+        <% else %>
+            <p class="text-center">Be the first to comment below</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% if logged_in? %>
+      <div class="row">
+        <p>
+        <h2>Join the discussion</h2>
+        </p>
+
+        <%= render 'comments/form' %>
+      </div>
+  <% else %>
+      <p class="alert alert-info">Sorry. Please login so you can comment on this recipe.
+      (Apologies for the incovenience)</p>
+  <% end %>
 
   <div class="row">
     <div class="col-md-12">

@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   post 'login'    =>  "sessions#create"
   delete 'logout' =>  "sessions#destroy"
 
-  resources :recipes
+  resources :recipes do
+    resources :comments
+  end
   resources :users
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
