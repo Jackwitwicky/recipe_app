@@ -6,7 +6,15 @@
   </p>
   <p class="comment-content">
     <%= comment.content %>
+    <% if comment.user == current_user %>
+      <div class="pull-right">
+        <%= link_to "Delete", [comment.recipe, comment], class: "btn btn-default delete-comment",
+                    method: :delete,
+                    data: {confirm: "Are you sure?"} %>
+      </div>
+  <% end %>
   </p>
+
 
   <hr class="featurette-divider">
 </section>
