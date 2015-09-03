@@ -10,7 +10,11 @@ class SessionsController < ApplicationController
       log_in(user)
       remember(user)
       flash[:success] = "You have been logged in"
-      redirect_to session[:previous_recipe_page]
+      if admin_logged_in?
+        redirect_to admins_path
+      else
+        redirect_to session[:previous_recipe_page]
+      end
     else
       flash[:danger] = "Invalid email/password combination"
       render 'new'

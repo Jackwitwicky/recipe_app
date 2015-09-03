@@ -6,7 +6,7 @@
   </p>
   <p class="comment-content">
     <%= comment.content %>
-    <% if comment.user == current_user %>
+    <% if comment.user == current_user || admin_logged_in? %>
       <div class="pull-right">
         <%= link_to "Delete", [comment.recipe, comment], class: "btn btn-default delete-comment",
                     method: :delete,

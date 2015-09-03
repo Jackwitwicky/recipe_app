@@ -36,6 +36,14 @@ module SessionsHelper
     end
   end
 
+  def admin_logged_in?
+    if current_user == User.find_by(email: "admin@root.com")
+      true
+    else
+      false
+    end
+  end
+
   #forgets a persistent session
   def forget(user)
     user.forget

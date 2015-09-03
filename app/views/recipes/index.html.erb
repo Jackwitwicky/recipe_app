@@ -2,8 +2,6 @@
   <h1 class="text-center">Welcome to the Recipe Box</h1>
 </div>
 
-<%= link_to "New Recipe", new_recipe_path, class: "btn btn-primary" %>
-
 <% @recipe.each_slice(3) do |recipes|%>
     <div class="row">
       <% recipes.each do |recipe| %>

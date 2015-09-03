@@ -46,6 +46,10 @@ class RecipesController < ApplicationController
     redirect_to root_path
   end
 
+  def about
+
+  end
+
   private
     def recipe_params
       params.require(:recipe).permit(:title, :description, :image, ingredients_attributes: [:id, :name, :_destroy],
