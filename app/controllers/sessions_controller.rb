@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in(user)
       remember(user)
-      flash[:success] = "You have been looged in"
+      flash[:success] = "You have been logged in"
       redirect_to session[:previous_recipe_page]
     else
       flash[:danger] = "Invalid email/password combination"

@@ -154,6 +154,21 @@ p {
   background-color: aliceblue;
 }
 
+/* user-image */
+section {
+  padding: 10px 0;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.comment-content {
+  font-weight: normal;
+}
+
 /* new user form */
 .user-form {
   margin-top: 10px;
