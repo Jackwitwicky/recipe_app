@@ -1,27 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a recipe web application. It allows one to create a new recipe with an accompanying description and instructions describing how to prepare the dish. There is image upload support, where the final image of the food can be uploaded and will be displayed in the home page.
+The app also has login support, where others users can create an account and be able to comment on recipes. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
