@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.2'
+gem 'rails', '5.0'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -29,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip', '~> 4.3.0'
 gem 'cocoon', '~> 1.2.6'
 gem 'aws-sdk', '~> 2.1.18'
+gem 'mimemagic', git: 'https://github.com/mimemagicrb/mimemagic', ref: 'a4b038c6c1b9d76dac33d5711d28aaa9b4c42c66'
+gem 'loofah', '< 2.21.0'
+gem 'execjs', '2.6.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

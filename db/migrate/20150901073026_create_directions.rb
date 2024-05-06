@@ -1,4 +1,4 @@
-class CreateDirections < ActiveRecord::Migration
+class CreateDirections < ActiveRecord::Migration[4.2]
   def change
     create_table :directions do |t|
       t.text :step
