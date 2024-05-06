@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip', '~> 4.3.0'
 gem 'cocoon', '~> 1.2.6'
 gem 'aws-sdk', '~> 2.1.18'
+gem 'mimemagic', git: 'https://github.com/mimemagicrb/mimemagic', ref: 'a4b038c6c1b9d76dac33d5711d28aaa9b4c42c66'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
