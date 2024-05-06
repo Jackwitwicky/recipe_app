@@ -1,4 +1,4 @@
-class Recipe < ActiveRecord::Base
+class Recipe < ApplicationRecord
   has_many :directions
   has_many :ingredients
   has_many :comments, dependent: :destroy
